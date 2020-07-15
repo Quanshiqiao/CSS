@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变背景</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(125deg,#2c3e50,#27ee60,#2980b9,#e74c3c,#8e44ad);
+            background-size: 400%;
+            animation: demo 15s infinite;
+        }
+        @keyframes demo {
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+        div{
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+            margin-top: 200px;
+            font-size: 35px;
+            color: white;
+            animation: demo2 15s infinite;
+        }
+        @keyframes demo2 {
+            0%{
+                color: #27ee60;
+            }
+            25%{
+                color:#2980b9;
+            }
+            50%{
+                color:#2980b9;
+            }
+            75%{
+                color:#e74c3c;
+            }
+            100%{
+                color: #8e44ad;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    background: linear-gradient
+</div>
+</body>
+</html>

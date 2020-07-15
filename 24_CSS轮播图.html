@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            /*网格布局*/
+            display: grid;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 670px;
+            height: 300px;
+            /*设置元素垂直居中*/
+            align-self: center;
+            /*设置元素水平居中*/
+            justify-self: center;
+            background-color: green;
+            overflow: hidden;
+            position: relative;
+        }
+        .container section{
+            width: 2680px;
+            height: 300px;
+            display: grid;
+            /*1行 4列，每列670px */
+            grid-template: 1fr/repeat(4,670px);
+            /*steps(4,end) 动画分为4步，每步1/4*/
+            animation: demo 6s infinite steps(4,end);
+            cursor: pointer;
+        }
+        /*悬浮停止动画*/
+        .container section:hover,section:hover+ul::after{
+            animation-play-state: paused;
+        }
+        @keyframes demo {
+            to{
+                transform: translateX(-2680px);
+            }
+        }
+        /*指示器*/
+        ul{
+            width: 200px;
+            position: absolute;
+            list-style: none;
+            bottom: 20px;
+            left: 50%; /* 水平居中 */
+            transform: translateX(-50%);
+            display: grid;
+            /*1行4列 每列50px*/
+            grid-template: 1fr/repeat(4,1fr)
+        }
+        ul::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e74c3c;
+            z-index: -1;
+            /*steps(4,end) 动画分为4步，每步1/4*/
+            animation:demo2 6s infinite steps(4,end);
+        }
+        li{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(0,0,0,.3);
+            display: grid;  /*  grid */
+            justify-items: center;/*文字水平居中*/
+            align-items: center; /*文字垂直居中*/
+            color: white;
+            cursor: pointer;
+        }
+        @keyframes demo2 {
+            to{
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<section>
+    <div><img src="image/24-1.jpg" alt=""></div>
+    <div><img src="image/24-2.jpg" alt=""></div>
+    <div><img src="image/24-3.jpg" alt=""></div>
+    <div><img src="image/24-4.jpg" alt=""></div>
+</section>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+</body>
+</html>

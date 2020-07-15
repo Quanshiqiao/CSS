@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #34495e;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loading{
+            width: 200px;
+            height: 200px;
+            /*兼容写法*/
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 50%;
+
+            border-top: 10px solid #e74c3c;
+            position: relative;
+            animation: demo 2s infinite linear;
+
+        }
+        .loading::before,.loading::after{
+            content: "";
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            /*因为从边框开始定位，顶部边框是10*/
+            top: -10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+        }
+        .loading::before{
+            border-top: 10px solid #e67e22;
+            transform: rotate(120deg);
+        }
+        .loading::after{
+            border-top: 10px solid #3498db;
+            transform: rotate(240deg);
+        }
+        .loading span{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            animation: demo2 2s infinite linear;
+
+        }
+        @keyframes demo {
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes demo2 {
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <span>
+            loading...
+    </span>
+</div>
+</body>
+</html>

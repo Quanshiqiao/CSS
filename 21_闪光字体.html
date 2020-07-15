@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000000;
+        }
+        h2{
+            /*转为大写*/
+            text-transform: uppercase;
+            color: white;
+            font-size: 6rem;
+        }
+        h2 span{
+            /*循环的线性动画*/
+            animation: demo .8s linear infinite;
+        }
+        h2 span:nth-child(2){
+            animation-delay: .1s;
+            margin-left: 30px;
+        }
+        h2 span:nth-child(3){
+            animation-delay: .2s;
+        }
+        h2 span:nth-child(4){
+            animation-delay: .3s;
+        }
+        h2 span:nth-child(5){
+            animation-delay: .4s;
+            margin-right: 30px;
+        }
+        h2 span:nth-child(6){
+            animation-delay: .5s;
+        }
+        h2 span:nth-child(7){
+            animation-delay: .6s;
+        }
+        h2 span:nth-child(8){
+            animation-delay: .7s;
+        }
+
+        @keyframes demo {
+            0%{
+               color: #333;
+                text-shadow: none;
+            }
+            100%{
+                color: #ffff;
+                text-shadow: 0 0 10px #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>
+    <span>I</span>
+    <span>L</span>
+    <span>o</span>
+    <span>v</span>
+    <span>e</span>
+    <span>y</span>
+    <span>o</span>
+    <span>u</span>
+</h2>
+</body>
+</html>

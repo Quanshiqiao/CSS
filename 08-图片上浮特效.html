@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+        }
+        .main{
+            height: 100%;
+            /*子元素居中*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main .box{
+            width: 320px;
+            height: 400px;
+            margin: 30px;
+            transition: 0.6s;
+            cursor: pointer;
+        }
+        .main .box:nth-child(1){
+            background: url("image/08-bg1.jpg") no-repeat;
+            background-size: 320px ;
+        }
+        .main .box:nth-child(2){
+            background: url("image/08-bg2.jpg") no-repeat;
+            background-size: 320px ;
+        }
+        .main .box:nth-child(3){
+            background: url("image/08-bg3.jpg") no-repeat;
+            background-size: 320px ;
+        }
+        .main .box:hover{
+            background-position: 0 bottom ;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>

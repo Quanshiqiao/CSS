@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>云层效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            animation: demo 5s linear 0s infinite alternate;
+        }
+        ul li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 400%;
+        }
+        ul li:nth-child(1){
+            background-image: url("image/04_one.png");
+            /*动画名 速度 时间 次数 往返运动 */
+            animation:demo1 ease 29s infinite alternate ;
+        }
+        ul li:nth-child(2){
+            background-image: url("image/04_two.png");
+            animation:demo2 ease-in 30s infinite alternate ;
+        }
+        ul li:nth-child(3){
+            background-image: url("image/04_three.png");
+            animation:demo3 ease-in-out 31s infinite alternate ;
+        }
+        @keyframes demo {
+            from{
+                background-color: skyblue;
+            }
+            to{
+                background-color: black;
+            }
+        }
+        @keyframes demo1 {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: 100%;
+            }
+        }
+        @keyframes demo2 {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left:  -200%;
+            }
+        }
+        @keyframes demo3 {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left:  -300%;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

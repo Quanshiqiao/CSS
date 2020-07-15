@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #06031b;
+            font-family: sans-serif;
+        }
+        a {
+            display: block;
+            position: relative;
+            padding: 20px;
+            font-size: 35px;
+            text-decoration: none;
+            /*text-transform: uppercase 字母转为大写*/
+            text-transform: uppercase;
+            /* 字母间的 间隔10px */
+            letter-spacing: 10px;
+            color: #fff;
+            /*box-shadow: 0 0 40px rgba(0,0,0,.5);*/
+            overflow: hidden;
+        }
+        a span{
+            position: absolute;
+            display: block;
+            background: #03a9f4;
+        }
+        a span:nth-child(1){
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(0);
+        }
+        a:hover span:nth-child(1){
+            transition: .5s;
+            transform: translateY(-100%);
+        }
+        a span:nth-child(2){
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transform: translateX(-100%);
+        }
+        a:hover span:nth-child(2){
+            transform: translateX(100%);
+            transition: .75s;
+            transition-delay: .25s;
+        }
+        a span:nth-child(3){
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(-100%);
+        }
+        a:hover span:nth-child(3){
+            transform: translateY(0);
+            transition: .5s;
+            transition-delay: .5s;
+        }
+        /**/
+        a span:nth-child(4){
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(0);
+        }
+        a:hover span:nth-child(4){
+            transition: .5s;
+            transform: translateY(100%);
+        }
+        /**/
+        a span:nth-child(5){
+            bottom: 0;
+            left:0;
+            width: 100%;
+            height: 2px;
+            transform: translateX(100%);
+        }
+        a:hover span:nth-child(5){
+            transform: translateX(-100%);
+            transition: .75s;
+            transition-delay: .25s;
+        }
+        a span:nth-child(6){
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            transform: translateY(100%);
+        }
+        a:hover span:nth-child(6){
+            transform: translateY(0);
+            transition: .5s;
+            transition-delay: .5s;
+        }
+    </style>
+</head>
+<body>
+<a href="#">
+        Bottn
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</a>
+</body>
+</html>

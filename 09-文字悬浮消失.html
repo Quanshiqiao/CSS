@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字悬浮消失</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2{
+            color: white;
+            font-size: 5rem;
+            text-transform: uppercase;
+            display: flex;
+        }
+        h2 span{
+            transition: 1.5s;
+        }
+        h2:hover span{
+            filter: blur(20px);
+            opacity: 0;
+            transform: scale(2);
+        }
+        h2 span:nth-child(n+1){
+            transition-delay: .1s;
+        }
+        h2 span:nth-child(n+2){
+            transition-delay: .2s;
+        }
+        h2 span:nth-child(n+3){
+            transition-delay: .3s;
+        }
+        h2 span:nth-child(n+4){
+            transition-delay: .4s;
+        }
+        h2 span:nth-child(n+5){
+            transition-delay: .5s;
+        }
+        h2 span:nth-child(n+6){
+            transition-delay: .6s;
+        }
+        h2 span:nth-child(n+7){
+            transition-delay: .7s;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <h2>
+        <span>I</span>
+        <span>&nbsp;&nbsp;</span>
+        <span>L</span>
+        <span>o</span>
+        <span>v</span>
+        <span>e</span>
+        <span>&nbsp;&nbsp;</span>
+        <span>y</span>
+        <span>o</span>
+        <span>u</span>
+    </h2>
+</div>
+</body>
+</html>

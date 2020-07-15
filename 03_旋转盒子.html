@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转盒子</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+        .wrap{
+            height: 200px;
+            margin-top: 200px;
+            perspective: 1000px;
+
+        }
+        .wrap .cube{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotate(0deg);
+            animation: demo 6s infinite linear;
+
+        }
+        .wrap .cube div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition:transform 0.5s ease-in;
+        }
+        .wrap .cube .front{
+            background-image: url("./image/03-1.jpg");
+            transform: translateZ(100px);
+        }
+        .wrap .cube .back{
+            background-image: url("./image/03-2.jpg");
+            transform: rotateX(180deg) translateZ(100px);
+        }
+        .wrap .cube .right{
+            background-image: url("./image/03-3.jpg");
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .wrap .cube .left{
+            background-image: url("./image/03-4.jpg");
+            transform: rotateY(270deg) translateZ(100px);
+        }
+        .wrap .cube .top{
+            background-image: url("./image/03-5.jpg");
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .wrap .cube .bottom{
+            background-image: url("./image/03-6.jpg");
+            transform: rotateX(270deg) translateZ(100px);
+
+        }
+        /*i标签*/
+        .wrap .cube i{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+        }
+        .wrap .cube .i-front{
+            background-image: url("./image/03-1.jpg");
+            transform: translateZ(50px);
+        }
+        .wrap .cube .i-back{
+            background-image: url("./image/03-2.jpg");
+            transform: rotateX(180deg) translateZ(50px);
+        }
+        .wrap .cube .i-right{
+            background-image: url("./image/03-3.jpg");
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .wrap .cube .i-left{
+            background-image: url("./image/03-4.jpg");
+            transform: rotateY(270deg) translateZ(50px);
+        }
+        .wrap .cube .i-top{
+            background-image: url("./image/03-5.jpg");
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .wrap .cube .i-bottom{
+            background-image: url("./image/03-6.jpg");
+            transform: rotateX(270deg) translateZ(50px);
+
+        }
+        .cube:hover .front{
+            transform: translateZ(200px);
+        }
+        .cube:hover .back{
+            transform: rotateX(180deg) translateZ(200px);
+        }
+        .cube:hover .right{
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .cube:hover .left{
+            transform: rotateY(270deg) translateZ(200px);
+        }
+        .cube:hover .top{
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .cube:hover .bottom{
+            transform: rotateX(270deg) translateZ(200px);
+        }
+
+        .cube:hover{
+            animation-play-state: paused;
+        }
+        @keyframes demo {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>鼠标悬浮到盒子上</h1>
+<div class="wrap">
+    <div class="cube">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+
+        <i class="i-front"></i>
+        <i class="i-back"></i>
+        <i class="i-right"></i>
+        <i class="i-left"></i>
+        <i class="i-top"></i>
+        <i class="i-bottom"></i>
+    </div>
+</div>
+</body>
+</html>

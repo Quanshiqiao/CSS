@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>霓虹字体</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #000;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        span{
+            display: block;
+
+        }
+        .box1{
+            font-size: 6rem;
+            font-weight: bold;
+            text-shadow: -3px 0 5px #e91e63, 0 0 2px #e91e63;
+            animation: demo 2s infinite linear;
+        }
+        .box2{
+            color: #e91e63;
+        }
+        @keyframes demo {
+            0%,30%,32%{
+                color: #222;
+                text-shadow: -3px 0 5px #222, 0 0 2px #222;
+            }
+            31%,33%,35%,100%{
+                color: #e91e63;
+                text-shadow: -3px 0 5px #e91e63, 0 0 2px #e91e63;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <span class="box1">CSS</span>
+    <span class="box2">very good</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #3498db;
+        }
+        .container{
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translate(0,-50%) rotateX(70deg);
+        }
+        .box{
+            position: fixed;
+            top: 0;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            animation: demo 4s linear infinite;
+        }
+        .box2{
+            animation-delay: 0.8s;
+        }
+        .box3{
+            animation-delay: 1.6s;
+        }
+        .box4{
+            animation-delay: 2.4s;
+        }
+        .box5{
+            animation-delay: 3.2s;
+        }.box6{
+             animation-delay: 4s;
+         }
+
+        @keyframes demo {
+            from{
+                border: 4px solid #8e44ad;
+            }
+            to{
+                border: 0px solid #8e44ad;
+                background: #9b59b670;
+                width: 400px;
+                height: 400px;
+                top: 20px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+</div>
+</body>
+</html>

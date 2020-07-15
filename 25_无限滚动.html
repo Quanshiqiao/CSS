@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无限轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        div{
+            width: 670px;
+            height: 300px;
+            margin: 100px auto;
+            border: 5px solid yellow;
+            overflow: hidden;
+            position: relative;
+
+        }
+        ul{
+            width: 4690px;
+            height: 300px;
+            position: absolute;
+            background-color: #555;
+            animation: demo 12s infinite linear;
+        }
+        li{
+            float: left;
+
+        }
+        @keyframes demo {
+            0%{
+                left: 0;
+            }
+            100%{
+                left: -4020px;
+            }
+        }
+        ul:hover{
+            animation-play-state: paused;
+        }
+
+        ul li:hover{
+            opacity: .7;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href=""><img src="image/24-1.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/24-2.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/24-3.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/24-4.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/25-1.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/25-2.jpg" alt=""></a> </li>
+        <li><a href=""><img src="image/24-1.jpg" alt=""></a> </li>
+    </ul>
+</div>
+</body>
+</html>
